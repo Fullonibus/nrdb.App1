@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="492.0" prefWidth="642.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nrdb7.HelloController">
+   <children>
+      <TabPane prefHeight="423.0" prefWidth="451.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="goodsTab" text="Goods">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="451.0">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="385.0" prefWidth="602.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Title" />
+                              <TableColumn fx:id="tagColumn" prefWidth="75.0" text="Tag" />
+                              <TableColumn fx:id="costColumn" prefWidth="75.0" text="Cost" />
+                              <TableColumn fx:id="amountColumn" prefWidth="75.0" text="Amount" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="ordersTab" text="Orders">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView1" prefHeight="385.0" prefWidth="602.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="numberColumn" prefWidth="75.0" text="№" />
+                              <TableColumn fx:id="clientColumn" prefWidth="75.0" text="Client" />
+                              <TableColumn fx:id="cellphoneColumn" prefWidth="75.0" text="Cellphone" />
+                              <TableColumn fx:id="goodsListColumn" prefWidth="75.0" text="Client's Good" />
+                              <TableColumn fx:id="orderDateColumn" prefWidth="75.0" text="Date" />
+                              <TableColumn fx:id="orderCostColumn" prefWidth="75.0" text="Cost" />
+                              <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="clientsTab" text="Clients">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView2" prefHeight="385.0" prefWidth="602.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="clientNameColumn" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="clientOrdersColumn" prefWidth="75.0" text="Summary Orders" />
+                              <TableColumn fx:id="ccellphoneColumn" prefWidth="75.0" text="Cellphone" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Input">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="button1" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" layoutX="279.0" layoutY="347.0" onAction="#onHelloButtonClick" text="Input" visible="false" />
+                        <MenuButton fx:id="menuButton" layoutX="241.0" layoutY="24.0" mnemonicParsing="false" text="Chose Data Base">
+                          <items>
+                              <MenuItem fx:id="goodsMenu" mnemonicParsing="false" onAction="#setOnActionGoodsMenu" text="Goods" />
+                            <MenuItem fx:id="ordersMenu" mnemonicParsing="false" onAction="#setOnActionOrdersMenu" text="Orders" />
+                            <MenuItem fx:id="clientsMenu" mnemonicParsing="false" onAction="#setOnActionClientsMenu" text="Clients" />
+                          </items>
+                        </MenuButton>
+                        <TextField fx:id="textField1" layoutX="227.0" layoutY="90.0" onDragDone="#goodsOnDrugDone" visible="false" />
+                        <TextField fx:id="textField2" layoutX="227.0" layoutY="125.0" onDragDone="#ordersOnDrugDone" visible="false" />
+                        <TextField fx:id="textField3" layoutX="227.0" layoutY="159.0" onDragDone="#clientsOnDrugDone" visible="false" />
+                        <TextField fx:id="textField4" layoutX="227.0" layoutY="194.0" visible="false" />
+                        <TextField fx:id="textField5" layoutX="227.0" layoutY="226.0" visible="false" />
+                        <TextField fx:id="textField6" layoutX="227.0" layoutY="260.0" visible="false" />
+                        <TextField fx:id="textField7" layoutX="227.0" layoutY="294.0" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label fx:id="welcomeText" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
